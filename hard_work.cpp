@@ -48,7 +48,7 @@ int main() {
     // Timing
     end = omp_get_wtime();
     spent = (double) (end - begin);
-    printf("time spent\t%lf\n", spent);
+    std::cout << spent << std::endl;
 
     return 0;
 }

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <cstdlib> // Для rand() и srand()
 #include <ctime>   // Для time()
 #include <omp.h>    // for timing only
@@ -49,6 +50,11 @@ int main() {
     end = omp_get_wtime();
     spent = (double) (end - begin);
     std::cout << spent << std::endl;
+
+    std::ofstream myfile;
+    myfile.open ("/src/out.txt");
+    myfile << spent;
+    myfile.close();
 
     return 0;
 }
